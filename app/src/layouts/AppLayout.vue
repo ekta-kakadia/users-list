@@ -73,7 +73,7 @@ export default {
     sidebarMenu: true,
     toggleMini: false,
     items: [
-      { title: "Home", href: "/home", icon: "mdi-home-outline" },
+      { title: "Home", href: "/", icon: "mdi-home-outline" },
       { title: "Users", href: "/users", icon: "mdi-shield-account" },
     ],
   }),
