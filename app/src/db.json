@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "first_name": "json-server",
+      "last_name": "typicode",
+      "number": "25830459835",
+      "email": "abc_example.com",
+      "username": "ekta",
+      "password": "1423412",
+      "company": "imp"
+    },
+    {
+      "first_name": "afsd",
+      "last_name": "asdf",
+      "email": "asdf",
+      "password": "asdf",
+      "username": "asdf",
+      "company": "asdf",
+      "number": "asdf",
+      "id": 4
+    }
+  ]
+}
