@@ -117,8 +117,41 @@
               <td>{{ item.username }}</td>
               <td>
                 <router-link :to="{ path: `/user/edit/${item.id}` }"
-                  >Edit</router-link
+                  ><v-btn color="primary">Edit</v-btn></router-link
                 >
+                <v-dialog v-model="deleteDialog[item.id]" width="500">
+                  <template v-slot:activator="{ on, attrs }">
+                    <v-btn
+                      color="red lighten-2"
+                      class="ml-4"
+                      v-bind="attrs"
+                      v-on="on"
+                      >Delete</v-btn
+                    >
+                  </template>
+
+                  <v-card>
+                    <v-card-title class="text-h5 grey lighten-2">
+                      Delete
+                    </v-card-title>
+
+                    <v-card-text class="mt-5">
+                      Are you sure want to delete this user?
+                    </v-card-text>
+
+                    <v-divider></v-divider>
+
+                    <v-card-actions>
+                      <v-spacer></v-spacer>
+                      <v-btn text @click="$set(deleteDialog, item.id, false)">
+                        Close
+                      </v-btn>
+                      <v-btn color="red lighten-2" @click="deleteUser(item.id)">
+                        Delete
+                      </v-btn>
+                    </v-card-actions>
+                  </v-card>
+                </v-dialog>
               </td>
             </tr>
           </tbody>
@@ -131,6 +164,7 @@
 export default {
   data() {
     return {
+      deleteDialog: {},
       nameRules: [(v) => !!v || "required"],
       valid: true,
       dialog: false,
@@ -177,6 +211,20 @@ export default {
           duration: 4000,
         });
       }
+    },
+    async deleteUser(id) {
+      await this.$store
+        .dispatch("deleteUser", { id: id })
+        .then(async () => {
+          this.$set(this.deleteDialog, id, true);
+          this.$toasted.success("User deleted successfully", {
+            theme: "bubble",
+            position: "top-right",
+            duration: 4000,
+          });
+          await this.$store.dispatch("users").catch((e) => e);
+        })
+        .catch((e) => e);
     },
   },
   computed: {

@@ -1,16 +1,6 @@
 {
   "users": [
     {
-      "id": 1,
-      "first_name": "ekta",
-      "last_name": "typicode",
-      "number": "25830459835",
-      "email": "abc@jkjsj.com",
-      "username": "ekta",
-      "password": "1423412",
-      "company": "imp"
-    },
-    {
       "first_name": "afsd",
       "last_name": "asdf",
       "email": "asdf",
@@ -19,56 +9,6 @@
       "company": "asdf",
       "number": "asdf",
       "id": 4
-    },
-    {
-      "first_name": "",
-      "last_name": "",
-      "email": "",
-      "password": "",
-      "username": "",
-      "company": "",
-      "number": "",
-      "id": 5
-    },
-    {
-      "first_name": "dasd",
-      "last_name": "asdf",
-      "email": "asdf",
-      "password": "asdf",
-      "username": "asdf",
-      "company": "asdf",
-      "number": "asdf",
-      "id": 6
-    },
-    {
-      "first_name": "sdaf",
-      "last_name": "asdf",
-      "email": "asdf",
-      "password": "asdf",
-      "username": "asdf",
-      "company": "adsf",
-      "number": "asdf",
-      "id": 7
-    },
-    {
-      "first_name": "asdasf",
-      "last_name": "asdf",
-      "email": "adsf",
-      "password": "asdf",
-      "username": "asdf",
-      "company": "asdf",
-      "number": "asdf",
-      "id": 8
-    },
-    {
-      "first_name": "asdf",
-      "last_name": "asdf",
-      "email": "asdf",
-      "password": "asdf",
-      "username": "asdf",
-      "company": "asdf",
-      "number": "32345",
-      "id": 9
     }
   ]
 }

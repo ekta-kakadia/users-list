@@ -76,7 +76,19 @@ export const store = new Vuex.Store({
       } catch (error) {
         return error;
       }
-    }
+    },
+    async deleteUser({ commit }, data) {
+      try {
+        const response = await axios.delete(`http://localhost:3000/users/${data.id}`,  {
+          headers: {
+            "Content-Type": "application/json"
+          }
+        });
+        return response && response.data;
+      } catch (error) {
+        return error;
+      }
+    },
   },
 
 });
