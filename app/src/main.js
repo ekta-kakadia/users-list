@@ -6,9 +6,10 @@ import router from './router'
 import 'vuetify/dist/vuetify.min.css'
 import axios from 'axios';
 import AppLayout from "./layouts/AppLayout.vue";
+import Toasted from 'vue-toasted';
 
 Vue.prototype.$http = axios;
-
+Vue.use(Toasted)
 Vue.use(vuetify);
 Vue.config.productionTip = false
 Vue.component("app-layout", AppLayout);

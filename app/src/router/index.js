@@ -18,5 +18,11 @@ export default new Router({
       meta: { layout: "app" },
       component: () => import("@/components/UserDetails.vue")
     },
+    {
+      path: "/user/edit/:id",
+      name: "edit",
+      meta: { layout: "app" },
+      component: () => import("@/components/EditUser.vue")
+    },
   ]
 });

@@ -54,11 +54,12 @@ export const store = new Vuex.Store({
     },
     async editUser({ commit }, data) {
       try {
-        await axios.put(`http://localhost:3000/users/${data.id}`, data,  {
+        const response = await axios.put(`http://localhost:3000/users/${data.id}`, data,  {
           headers: {
             "Content-Type": "application/json"
           }
         });
+        return response && response.data;
       } catch (error) {
         return error;
       }

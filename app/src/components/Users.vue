@@ -32,7 +32,7 @@
               <td>{{item.company}}</td>
               <td>{{ item.email }}</td>
               <td>{{item.username}}</td>
-              <td></td>
+              <td><router-link :to="{path: `/user/edit/${item.id}`}">Edit</router-link></td>
             </tr>
           </tbody>
         </template>
