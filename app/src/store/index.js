@@ -9,7 +9,7 @@ Vue.use(Vuex);
 export const store = new Vuex.Store({
   state: {
     users: {},
-    category: []
+    userDetails: {}
   },
   mutations: {
     users(state, value) {
@@ -70,6 +70,7 @@ export const store = new Vuex.Store({
             "Content-Type": "application/json"
           }
         });
+        console.log(response)
         commit("userDetails", response.data);
       } catch (error) {
         return error;

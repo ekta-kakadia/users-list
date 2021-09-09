@@ -24,9 +24,9 @@
           <tbody>
             <tr v-for="item in users" :key="item.name">
               <td>
-                {{
+                <router-link :to="{ path: `/user/${item.id}` }">{{
                   item.id
-                }}
+                }}</router-link>
               </td>
               <td>{{ item.first_name }} {{item.last_name}}</td>
               <td>{{item.company}}</td>

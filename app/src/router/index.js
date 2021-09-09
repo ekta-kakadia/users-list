@@ -12,5 +12,11 @@ export default new Router({
       meta: { layout: "app" },
       component: () => import("@/components/Users.vue")
     },
+    {
+      path: "/user/:id",
+      name: "details",
+      meta: { layout: "app" },
+      component: () => import("@/components/UserDetails.vue")
+    },
   ]
 });
