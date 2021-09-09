@@ -5,12 +5,12 @@
 ## To run application follow below steps
 ```
 * Go to /app folder
-* run `npm i command`
+* run `npm i`
 * run `npm run serve`
 * As for data management json server is used, first go to /app/src, then run `json-server --watch db.json`
 ```
 
-## Libraries in making system are:
+## Libraries used:
 
 * Vuetify
 * axios
